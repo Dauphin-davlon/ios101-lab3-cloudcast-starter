@@ -1,8 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sSE-jj-U3K">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Forecast View Controller-->
+        <scene sceneID="Z03-em-LWT">
+            <objects>
+                <viewController id="sSE-jj-U3K" customClass="ForecastViewController" customModule="CloudCast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c1F-We-36t" customClass="Forecast">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miami, Florida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x23-RJ-VpS">
+                                <rect key="frame" x="113.33333333333333" y="79" width="166.66666666666669" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="place-marker" translatesAutoresizingMaskIntoConstraints="NO" id="Mfe-EP-bNE">
+                                <rect key="frame" x="81.333333333333329" y="79" width="30" height="30"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kQZ-Xi-yxX"/>
+                                    <constraint firstAttribute="width" constant="30" id="uZC-cR-apI"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="HgM-I3-STW">
+                                <rect key="frame" x="109" y="187.66666666666663" width="175" height="371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mar 3, 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mql-Zf-uow">
+                                        <rect key="frame" x="41.33333333333335" y="0.0" width="92.666666666666686" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud-fog" translatesAutoresizingMaskIntoConstraints="NO" id="vFj-Yj-XwS">
+                                        <rect key="frame" x="0.0" y="65.333333333333343" width="175" height="175"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="175" id="7uA-lA-Zg2"/>
+                                            <constraint firstAttribute="width" constant="175" id="aon-If-mUo"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cloudy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usm-4C-L2h">
+                                        <rect key="frame" x="60.666666666666657" y="285.33333333333337" width="53.666666666666657" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3R-0c-GFq">
+                                        <rect key="frame" x="83" y="350.66666666666674" width="9.3333333333333286" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfo-L7-3qj">
+                                <rect key="frame" x="16.000000000000004" y="334" width="37.333333333333343" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="◀"/>
+                                <connections>
+                                    <action selector="didTapBackButton:" destination="sSE-jj-U3K" eventType="touchUpInside" id="8Fa-uh-4xL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGU-hf-w8e">
+                                <rect key="frame" x="339.66666666666669" y="334" width="37.333333333333314" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="▶"/>
+                                <connections>
+                                    <action selector="didTapForwardButton:" destination="sSE-jj-U3K" eventType="touchUpInside" id="f2Q-q5-idS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qPq-xN-hQr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mfe-EP-bNE" firstAttribute="top" secondItem="qPq-xN-hQr" secondAttribute="top" constant="20" id="97J-MT-KJd"/>
+                            <constraint firstItem="x23-RJ-VpS" firstAttribute="leading" secondItem="Mfe-EP-bNE" secondAttribute="trailing" constant="2" id="Aea-nW-n8d"/>
+                            <constraint firstItem="HgM-I3-STW" firstAttribute="top" secondItem="x23-RJ-VpS" secondAttribute="bottom" constant="75" id="JGw-lM-YDR"/>
+                            <constraint firstItem="cfo-L7-3qj" firstAttribute="leading" secondItem="qPq-xN-hQr" secondAttribute="leading" constant="16" id="McA-OU-WnD"/>
+                            <constraint firstItem="x23-RJ-VpS" firstAttribute="centerX" secondItem="c1F-We-36t" secondAttribute="centerX" id="acD-K3-7S4"/>
+                            <constraint firstItem="qPq-xN-hQr" firstAttribute="trailing" secondItem="rGU-hf-w8e" secondAttribute="trailing" constant="16" id="cIi-qX-shl"/>
+                            <constraint firstItem="HgM-I3-STW" firstAttribute="centerX" secondItem="c1F-We-36t" secondAttribute="centerX" id="eP1-Eg-bbf"/>
+                            <constraint firstItem="x23-RJ-VpS" firstAttribute="top" secondItem="qPq-xN-hQr" secondAttribute="top" constant="20" id="epg-0V-Jpm"/>
+                            <constraint firstItem="cfo-L7-3qj" firstAttribute="centerY" secondItem="c1F-We-36t" secondAttribute="centerY" constant="-75" id="iBO-DX-dzG"/>
+                            <constraint firstItem="rGU-hf-w8e" firstAttribute="centerY" secondItem="c1F-We-36t" secondAttribute="centerY" constant="-75" id="s9C-xg-u4s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="Mql-Zf-uow" id="Uwi-YV-b6b"/>
+                        <outlet property="descriptionLabel" destination="Usm-4C-L2h" id="wde-yv-zPF"/>
+                        <outlet property="forecastImageView" destination="vFj-Yj-XwS" id="9Yk-44-ZCf"/>
+                        <outlet property="locationLabel" destination="x23-RJ-VpS" id="6Kx-6V-Bqc"/>
+                        <outlet property="temperatureLabel" destination="r3R-0c-GFq" id="hbW-ET-iKo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQ8-6z-PXV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-196.18320610687022" y="-156.33802816901408"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud-fog" width="91" height="91"/>
+        <image name="place-marker" width="64" height="64"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
